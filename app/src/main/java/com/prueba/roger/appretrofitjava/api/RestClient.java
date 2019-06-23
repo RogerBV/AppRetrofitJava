@@ -1,4 +1,6 @@
-package com.prueba.roger.appretrofitjava;
+package com.prueba.roger.appretrofitjava.api;
+
+import com.prueba.roger.appretrofitjava.PokemonFeed;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

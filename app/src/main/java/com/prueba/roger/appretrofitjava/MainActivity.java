@@ -2,10 +2,13 @@ package com.prueba.roger.appretrofitjava;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.prueba.roger.appretrofitjava.api.RestClient;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -15,10 +18,22 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
 
+    private RecyclerView recyclerView;
+    private MainPresenter presenter;
+    private MainAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initViews();
+    }
+    private void initViews(){
+        recyclerView = (RecyclerView)findViewById(R.id.recycler);
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+        loadJSON();
     }
     private void loadJSON(){
         Gson gson = new GsonBuilder()
