@@ -1,4 +1,6 @@
-package com.prueba.roger.appretrofitjava;
+package com.prueba.roger.appretrofitjava.data.model;
+
+import com.prueba.roger.appretrofitjava.Result;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.prueba.roger.appretrofitjava.api;
+package com.prueba.roger.appretrofitjava.data.api;
 
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;

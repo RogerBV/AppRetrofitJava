@@ -8,7 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.prueba.roger.appretrofitjava.api.RestClient;
+import com.prueba.roger.appretrofitjava.data.api.RestClient;
+import com.prueba.roger.appretrofitjava.data.model.PokemonFeed;
 
 import retrofit2.Call;
 import retrofit2.Callback;
