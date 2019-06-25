@@ -12,7 +12,7 @@ import retrofit2.Response;
 
 public class PokemonDetailPresenter {
     private PokemonDetailView view;
-    private PokemonDetailPresenter(PokemonDetailView pokemonDetailView)
+    public PokemonDetailPresenter(PokemonDetailView pokemonDetailView)
     {
         this.view = pokemonDetailView;
     }

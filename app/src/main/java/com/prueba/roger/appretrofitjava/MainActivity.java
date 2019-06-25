@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = (RecyclerView)findViewById(R.id.recycler);
+        adapter = new MainAdapter(MainActivity.this,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         presenter = new MainPresenter(this);
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
 
     @Override
     public void notifyDataSetChanged(List<Result> pokemon) {
+
         adapter.swap(pokemon);
     }
 
